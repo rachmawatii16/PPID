@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permohonan</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style css -->
+    <style>
+      body {
+        background: #fff;
+        color: #000;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+      }
+      .header {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav_logo img {
+        height: 60px;
+      }
+      .nav_list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav_item {
+        margin-left: 1.5rem;
+      }
+      .nav_link {
+        font-family: arial;
+        color: #1e1e1e;
+        text-decoration: none;
+        transition: color 1s, text-decoration 1s linear;
+      }
+      .nav__link:hover {
+        color: #5b90c4;
+        text-decoration: none;
+      }
+      .nav_search a {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
+      .card {
+        margin-top: 20px;
+        padding-bottom: 20px;
+      }
+      .card-header {
+        background-color: #5b90c4;
+        color: #fff;
+        font-size: 1.25rem;
+        padding: 0.75rem 1.25rem;
+      }
+      .card-body {
+        padding: 1.25rem;
+      }
+      .btn-custom {
+        background-color: #5b90c4;
+        border-radius: 9px;
+        border: none;
+        font-size: 1rem;
+        padding: 0.375rem 1.25rem;
+      }
+      .form-image {
+        max-width: 70%;
+        height: auto;
+      }
+      .footer {
+        background-color: #5b90c4;
+        padding: 2rem 0;
+        color: #fff;
+        border-top: 1px solid #dee2e6;
+      }
+      #formulir {
+        margin-bottom: 40px;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+      .social img {
+        height: 30px;
+      }
+      .footer .row {
+        align-items: center;
+      }
+      @media (max-width: 767.98px) {
+        .footer .row {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer .col-md-6 {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <!-- navbar -->
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="/" class="nav_logo">
+          <img src="../Assets/logo-bbgp.png" alt="Logo" />
+        </a>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="../Templates/beranda.html" class="nav_link">Beranda</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Profil PPID</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Regulasi</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Informasi Publik</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Layanan Informasi</a>
+          </li>
+        </ul>
+        <div class="nav__search">
+          <input type="text" placeholder="Cari..." />
+          <i data-feather="search"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- judul -->
+    <section id="general-description" class="judul">
+      <div class="container mt-5">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h3 style="color: #3366cc">Permohonan Informasi</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- prosedur -->
+    <section id="general" class="sub-judul">
+      <div class="container mt-4">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h5 style="color: #1e1e1e">Prosedur Permohonan Informasi</h5>
+          </div>
+          <ul style="color: #1e1e1e; text-align: justify; margin-top: 0.5rem">
+            <li>
+              Layanan informasi di BBGP JABAR dikelola secara terpusat satu
+              pintu oleh Pejabat Pengelola Informasi dan Dokumentasi (PPID)
+              yaitu Kepala Subbagian Tata Usaha dan Rumah Tangga BBGP JABAR.
+            </li>
+            <li>
+              Unit layanan informasi publik diselenggarakan di Unit Layanan
+              Publik (ULP). Jl. Diponegoro No.12, Citarum, Kec. Bandung Wetan,
+              Kota Bandung, Jawa Barat 40115, di bawah Subbagian Tata Usaha dan
+              Rumah Tangga.
+            </li>
+            <li>
+              Permohonan informasi ke PPID BBGP JABAR dapat disampaikan secara
+              langsung datang ke ULP maupun tidak langsung melalui telepon, SMS,
+              email, surat, faks, dan laman
+              <a href="https://bbgpjabar.kemdikbud.go.id">klik disini.</a>
+            </li>
+            <li>
+              Pemohon informasi wajib mengikuti ketentuan yang berlaku, sebagai
+              berikut:
+              <ul>
+                <li>
+                  Apabila pemohon mengatasnamakan pribadi, wajib melampirkan
+                  fotocopy KTP.
+                </li>
+                <li>
+                  Apabila pemohon mengatasnamakan LSM, wajib menyertakan
+                  fotocopy akta notaris yang mencantumkan nomor registrasi bahwa
+                  LSM tersebut terdaftar di Kementerian Hukum dan HAM atau
+                  Kementerian Dalam Negeri.
+                </li>
+                <li>
+                  Apabila pemohon mengatasnamakan perusahaan, wajib menyertakan
+                  foto copy akta pendirian perusahaan.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Berdasarkan
+              <a
+                href="http://ult.kemdikbud.go.id/uploads/dokumen/undang-undang-nomor-14-tahun-2008.pdf"
+                >Undang-Undang Nomor 14 Tahun 2008</a
+              >
+              tentang Keterbukaan Informasi Publik, jangka waktu pemenuhan
+              informasi berlangsung selama 10 hari kerja dan dapat ditambah 7
+              hari kerja.
+            </li>
+            <li>Jadwal pelayanan informasi:</li>
+            <ul>
+              <li>Senin – Kamis = 07.30 s.d 16.00 WIB</li>
+              <li>Istirahat = 12.00 s.d 13.00 WIB</li>
+              <li>Jumat = 07.30 s.d 16.30 WIB</li>
+              <li>Istirahat = 11.30 s.d 13.00</li>
+            </ul>
+            <li>
+              Pemohon informasi ini tidak dipungut biaya, namun jika ada dokumen
+              yang harus difotokopi dan penggandaan CD dibebankan kepada pemohon
+              informasi.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- formulir -->
+    <section id="formulir" class="form">
+      <div class="container mt-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card" style="border-radius: 20px">
+              <div class="card-header" style="border-radius: 20px 20px 0 0">
+                Formulir
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="card-text">
+                      Silakan klik tautan 'Isi Formulir' dan lengkapi setiap
+                      bagian formulir sesuai dengan ketentuan yang tertera.
+                      Harap ikuti dengan teliti untuk memastikan permohonan Anda
+                      dapat diproses dengan cepat dan tepat.
+                    </p>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfj6G5Hz9L_wZtIet74mCN30vBjlT7OoJ4eLO5GTyYoLjjhwg/viewform"
+                      class="btn btn-custom"
+                      style="color: #fff"
+                      >Isi Formulir</a
+                    >
+                  </div>
+                  <div
+                    class="col-md-6 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../Assets/form.png"
+                      alt="Gambar form"
+                      class="form-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-4">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-md-6 d-flex flex-column align-items-start">
+            <img
+              src="../Assets/logo-putih.png"
+              alt="Logo"
+              style="height: 70px"
+            />
+            <p>&copy; 2024 BBGP Jawa Barat</p>
+            <p>
+              Balai Besar Guru Penggerak Provinsi Jawa Barat<br />Jl. Diponegoro
+              No.12 Bandung<br />(022) 423 1191<br />bbgpjabar@kemdikbud.go.id
+            </p>
+          </div>
+          <div class="col-md-6 d-flex flex-column align-items-end">
+            <h4>Ikuti Kami</h4>
+            <ul class="social list-unstyled d-flex">
+              <li>
+                <a
+                  href="https://www.facebook.com/BBGPJabar.kemdikbudristek"
+                  title="Facebook"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-facebook.png"
+                    alt="Facebook"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/bbgp_jabar"
+                  title="Twitter"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-twitter.png"
+                    alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/bbgpjabar.kemdikbudristek/"
+                  title="Instagram"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-instagram.png"
+                    alt="Instagram"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/c/BBGPJabardhP4TKTKdanPLB"
+                  title="Youtube"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-youtube.png"
+                    alt="Youtube"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@p4tktkplb.kemdikbud"
+                  title="Tiktok"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-tiktok.png"
+                    alt="Tiktok"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://open.spotify.com/show/6DCe3lNzVEgG7VrXo71Acq?si=kK8eK1VOQUOoFf7vr2bo0A&dl_branch=1"
+                  title="Spotify"
+                  target="_blank"
+                  ><img
+                    src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-spotify.png"
+                    alt="Spotify"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

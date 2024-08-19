@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+    />
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style css -->
+    <style>
+      body {
+        background: #fff;
+        color: #000;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+      h3,
+      h4 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+      }
+      h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+      .header {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav_logo img {
+        height: 60px;
+      }
+      .nav_list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav_item {
+        margin-left: 1.5rem;
+      }
+      .nav_link {
+        font-family: arial;
+        color: #1e1e1e;
+        text-decoration: none;
+        transition: color 1s, text-decoration 1s linear;
+      }
+      .nav__link:hover {
+        color: #5b90c4;
+        text-decoration: none;
+      }
+      .nav_search a {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
+      .footer {
+        background-color: #5b90c4;
+        padding: 2rem 0;
+        color: #fff;
+        border-top: 1px solid #dee2e6;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+      .social img {
+        height: 30px;
+      }
+      .footer .row {
+        align-items: center;
+      }
+      @media (max-width: 767.98px) {
+        .footer .row {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer .col-md-6 {
+          text-align: center;
+        }
+      }
+      .card-custom {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        margin: 0;
+        border: none;
+      }
+      .card-body-custom {
+        padding: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card-prestasi {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        margin: 0;
+        border: none;
+        height: 100%; 
+      }
+      .card-body-prestasi {
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;  
+        height: 100%; 
+        justify-content: center;
+        align-items: center;
+      }
+      .text-content {
+        flex: 1;
+        padding-right: 1rem;
+      }
+      .image-content {
+        flex: 0 0 50%;
+        text-align: right;
+      }
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-3px);
+        }
+        50% {
+          transform: translateX(3px);
+        }
+        75% {
+          transform: translateX(-3px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .card-prestasi:hover {
+        animation: shake 1.2s ease-in-out;
+      }
+      .card-wrapper {
+        background-color: #5b90c4;
+        padding: 2rem;
+        border-radius: 15px;
+      }
+      .card-layanan {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        margin: 0;
+        border: none;
+      }
+      .card-body-layanan {
+        padding: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card-hubungi {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        margin: 0;
+        border: none;
+      }
+      .card-body-hubungi {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        margin: 0;
+        border: none;
+      }
+      .btn-custom {
+        background-color: #5b90c4;
+        border: none;
+        font-size: 1rem;
+        padding: 0.375rem 1.25rem;
+        border-radius: 9px;
+      }
+      .card-image {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+      }
+      section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="/" class="nav_logo">
+          <img src="../Assets/logo-bbgp.png" alt="Logo" />
+        </a>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="../Templates/beranda.html" class="nav_link">Beranda</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Profil PPID</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Regulasi</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Informasi Publik</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="nav_link">Layanan Informasi</a>
+          </li>
+        </ul>
+        <div class="nav__search">
+          <input type="text" placeholder="Cari..." />
+          <i data-feather="search"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- judul -->
+    <section id="general-description" class="judul">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 style="color: #1e1e1e">Selamat Datang di PPID</h3>
+            <h3 style="color: #3366cc">Balai Besar Guru Penggerak</h3>
+            <h3 style="color: #3366cc">Jawa Barat</h3>
+            <p style="color: #1e1e1e; text-align: justify; margin-top: 0.5rem">
+              PPID adalah kepanjangan dari Pejabat Pengelola Informasi dan
+              Dokumentasi. PPID berfungsi sebagai pengelola dan penyampai
+              dokumen yang dimiliki oleh badan publik sesuai dengan amanat UU
+              14/2008 tentang Keterbukaan Informasi Publik. Dengan keberadaan
+              PPID maka masyarakat yang akan menyampaikan permohonan informasi
+              akan lebih mudah dan tidak terbelit-belit karena dilayani melalui
+              satu pintu.
+            </p>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <img
+              src="../Assets/kantor-1.jpg"
+              alt="Foto Kantor"
+              class="img-fluid"
+              style="max-width: 90%; height: auto; border-radius: 20px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card berisi prestasi PPID -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-prestasi">
+            <div class="card-body card-body-prestasi">
+              <h3 class="card-title" style="color: #3366cc; text-align: center;">
+                100+
+              </h3>
+              <h5 class="card-text" style="color: #1e1e1e; text-align: center;">
+                Permohonan Informasi Telah Diterima
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-prestasi">
+            <div class="card-body card-body-prestasi">
+              <h3 class="card-title" style="color: #3366cc; text-align: center">
+                100+
+              </h3>
+              <h5 class="card-text" style="color: #1e1e1e; text-align: center">
+                Permohonan Informasi Telah Terselesaikan
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-prestasi">
+            <div class="card-body card-body-prestasi">
+              <h3 class="card-title" style="color: #3366cc; text-align: center">
+                92%
+              </h3>
+              <h5 class="card-text" style="color: #1e1e1e; text-align: center">
+                Pemohon Memberikan Ulasan Positif
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- layanan PPID -->
+    <section id="layanan" class="layanan">
+      <div class="container mt-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 d-flex justify-content-center">
+            <h3 style="color: #1e1e1e; text-align: center">
+              Apa Saja Yang Ada Di PPID?
+            </h3>
+          </div>
+        </div>
+
+        <!-- bg biru di belakang card -->
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="card-wrapper">
+              <!-- Card 1 -->
+              <div class="card card-layanan mb-4">
+                <div
+                  class="card-body card-body-layanan d-flex align-items-center"
+                >
+                  <div class="text-content" style="flex: 1">
+                    <h5 class="card-title" style="color: #1e1e1e">
+                      Permohonan Informasi
+                    </h5>
+                    <p
+                      class="card-text"
+                      style="color: #1e1e1e; text-align: justify"
+                    >
+                      Permohonan Informasi adalah permintaan akses terhadap
+                      informasi publik yang dilakukan oleh masyarakat kepada
+                      Balai Besar Guru Penggerak Jawa Barat.
+                    </p>
+                    <a
+                      href="/Templates/permohonan.html"
+                      class="btn btn-custom"
+                      style="color: #fff"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                  <div
+                    class="image-content"
+                    style="flex: 0 0 40%; text-align: right"
+                  >
+                    <img
+                      src="../Assets/card-1.png"
+                      alt="gambar 1"
+                      class="card-image"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="card card-layanan mb-4">
+                <div
+                  class="card-body card-body-layanan d-flex align-items-center"
+                >
+                  <div class="text-content" style="flex: 1">
+                    <h5 class="card-title" style="color: #1e1e1e">
+                      Pengajuan Keberatan Atas Permohonan Informasi Publik
+                    </h5>
+                    <p
+                      class="card-text"
+                      style="color: #1e1e1e; text-align: justify"
+                    >
+                      Pengajuan Keberatan atas Permohonan Informasi Publik
+                      adalah pengajuan yang dilakukan oleh pemohon informasi
+                      jika merasa tidak puas dengan tanggapan PPID.
+                    </p>
+                    <a
+                      href="/Templates/pengajuan.html"
+                      class="btn btn-custom"
+                      style="color: #fff"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                  <div
+                    class="image-content"
+                    style="flex: 0 0 40%; text-align: right"
+                  >
+                    <img
+                      src="../Assets/card-2.png"
+                      alt="gambar 2"
+                      class="card-image"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="card card-layanan mb-4">
+                <div
+                  class="card-body card-body-layanan d-flex align-items-center"
+                >
+                  <div class="text-content" style="flex: 1">
+                    <h5 class="card-title" style="color: #1e1e1e">
+                      Penyelesaian Sengketa Informasi
+                    </h5>
+                    <p
+                      class="card-text"
+                      style="color: #1e1e1e; text-align: justify"
+                    >
+                    Penyelesaian Sengketa Informasi adalah proses 
+                    penyelesaian perselisihan yang timbul antara pemohon 
+                    informasi dan badan publik terkait permohonan informasi publik. 
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-custom"
+                      style="color: #fff"
+                      >Selengkapnya</a
+                    >
+                  </div>
+                  <div
+                    class="image-content"
+                    style="flex: 0 0 40%; text-align: right"
+                  >
+                    <img
+                      src="../Assets/card-3.png"
+                      alt="gambar 3"
+                      class="card-image"
+                    />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cara Kerja -->
+    <section id="prosedur" class="prosedur">
+      <div class="container mt-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 d-flex justify-content-center">
+            <h4 style="color: #1e1e1e; text-align: center">
+              Bagaimana Cara Kerjanya?
+            </h4>
+          </div>
+        </div>
+        <div style="width: auto; height: 487px; position: relative; background: white">
+          <h5 style="left: 150px; top: 42px; position: absolute; color: #1E1E1E;">Mengisi Formulir</h5>
+          <p style="left: 150px; top: 81px; position: absolute; color: #1E1E1E; ">Pemohon mengisi formulir secara <br/>langsung maupun secara elektronik<br/>melalui website PPID</p>
+          <p style="left: 150px; top: 234px; position: absolute; color: #1E1E1E; ">Balai Besar Guru Penggerak Jawa Barat<br/>akan segera menanggapi permohonan<br/>informasi</p>
+          <p style="left: 150px; top: 385px; position: absolute; color: #1E1E1E; ">Pemohon menerima informasi yang <br/>sesuai dengan permohonan yang<br/>diajukan</p>
+          <h5 style="left: 150px; top: 195px; position: absolute; color: #1E1E1E; ">Menunggu Informasi</h5>
+          <h5 style="left: 150px; top: 348px; position: absolute; color: #1E1E1E; ">Menerima Informasi</h5>
+          <div style="width: 70px; height: 70px; left: 52px; top: 74.63px; position: absolute; background: #5B90C4; border-radius: 9999px"></div>
+          <div style="width: 70px; height: 70px; left: 52px; top: 223px; position: absolute; background: #5B90C4; border-radius: 9999px"></div>
+          <div style="width: 70px; height: 70px; left: 52px; top: 371px; position: absolute; background: #5B90C4; border-radius: 9999px"></div>
+          <div style="width: 24px; height: 48px; left: 79px; top: 81px; position: absolute; color: white; font-size: 40px; font-family: Poppins; font-weight: 600; word-wrap: break-word">1</div>
+          <div style="width: 24px; height: 48px; left: 75px; top: 229px; position: absolute; color: white; font-size: 40px; font-family: Poppins; font-weight: 600; word-wrap: break-word">2</div>
+          <div style="width: 24px; height: 48px; left: 75px; top: 376px; position: absolute; color: white; font-size: 40px; font-family: Poppins; font-weight: 600; word-wrap: break-word">3</div>
+          <img style="width: 393px; height: 430px; left: 630px; top: 42px; position: absolute; border-radius: 20px;" src="../Assets/prosedur.jpeg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- masalah -->
+    <section id="hubungi" class="hubungi">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content" style="flex: 1">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card-wrapper">
+                    <div class="card card-hubungi mb-4">
+                      <div class="card-body card-body-hubungi d-flex align-items-center">
+                        <div class="text-content" style="flex: 1">
+                        <h4 class="card-title" style="color: #1e1e1e">Bagaimana Kami Bisa Membantu Anda?</h4>
+                        <p class="card-text" style="color: #1e1e1e; text-align: justify">
+                        Kami dengan senang hati akan membantu Anda. Silakan hubungi
+                        kami melalui kontak yang tersedia untuk mendapatkan layanan
+                        terbaik dari kami.
+                    </p>
+                    <a href="../Templates/kontak.html" class="btn btn-custom" style="color: #fff">Hubungi Kami</a>
+                  </div>
+                  <div class="image-content" style="flex: 0 0 40%; text-align: right">
+                    <img src="../Assets/hubungi.png" alt="gambar hubungi" class="card-image" />
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- faq -->
+    <!-- <section id="faq" class="faq">
+      <div class="container mt-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 d-flex justify-content-center">
+            <h4 style="color: #1e1e1e; text-align: center">
+              Temukan Berbagai Pertanyaan Serta Jawaban Seputar PPID Disini!
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col-md-6 d-flex flex-column align-items-start">
+              <img src="../Assets/logo-putih.png" alt="Logo" style="height: 70px;">
+              <p>&copy; 2024 BBGP Jawa Barat</p>
+              <p>Balai Besar Guru Penggerak Provinsi Jawa Barat<br />Jl. Diponegoro No.12 Bandung<br>(022) 423 1191<br>bbgpjabar@kemdikbud.go.id</p>
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-end">
+              <h4>Ikuti Kami</h4>
+              <ul class="social list-unstyled d-flex">
+                <li><a href="https://www.facebook.com/BBGPJabar.kemdikbudristek" title="Facebook" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://twitter.com/bbgp_jabar" title="Twitter" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://instagram.com/bbgpjabar.kemdikbudristek/" title="Instagram" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/c/BBGPJabardhP4TKTKdanPLB" title="Youtube" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-youtube.png" alt="Youtube"></a></li>
+                <li><a href="https://www.tiktok.com/@p4tktkplb.kemdikbud" title="Tiktok" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-tiktok.png" alt="Tiktok"></a></li>
+                <li><a href="https://open.spotify.com/show/6DCe3lNzVEgG7VrXo71Acq?si=kK8eK1VOQUOoFf7vr2bo0A&dl_branch=1" title="Spotify" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-spotify.png" alt="Spotify"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <!-- font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style css -->
+    <style>
+      body {
+        background: #fff;
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+      }
+      h3, h4, h5 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      }
+      .header {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav_logo img {
+        height: 60px;
+      }
+      .nav_list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav_item {
+        margin-left: 1.5rem;
+      }
+      .nav_link {
+        font-family: arial;
+        color:#1e1e1e;
+        text-decoration: none;
+        transition: color 1s, text-decoration 1s linear;
+      } 
+      .nav__link:hover {
+        color: #5B90C4; 
+        text-decoration: none; 
+      }
+      .nav_search a {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    .footer {
+      background-color: #5B90C4;
+      padding: 2rem 0;
+      color: #fff;
+      border-top: 1px solid #dee2e6;
+    }
+    .social {
+      display: flex;
+      gap: 10px; 
+    }
+    .social img {
+      height: 30px; 
+    }
+    .footer .row {
+      align-items: center; 
+    }
+    @media (max-width: 767.98px) {
+      .footer .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer .col-md-6 {
+    text-align: center;
+  }
+    }
+    #map-informasi {
+        margin-bottom: 40px; 
+    }
+  </style>
+</head>
+<!-- navbar -->
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav_logo">
+                <img src="../Assets/logo-bbgp.png" alt="Logo">
+            </a>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="../Templates/beranda.html" class="nav_link">Beranda</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Profil PPID</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Regulasi</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Informasi Publik</a></li>
+                <li class="nav_item"><a href="" class="nav_link">Layanan Informasi</a></li>
+            </ul>
+            <div class="nav__search">
+              <input type="text" placeholder="Cari..." />
+                <i data-feather="search"></i>
+          </div>      
+        </nav>
+      </header>
+    <!-- judul contact -->
+     <section id="contact" class="kontak-kami">
+        <div class="container mt-5">
+			<div class="row align-items-center">
+				<div class="col-12">
+                    <h3 style="color: #3366CC">Kontak Kami</h3>
+                </div>
+            </div>
+        </div>
+     </section>
+    
+     <!-- maps -->
+<section id="map-informasi" class="map-informasi">
+    <div class="container mt-3">
+      <div class="row d-flex align-items-start">
+        <div class="col-lg-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9107433190234!2d107.61241347356518!3d-6.901277367535003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64ea3668059%3A0x746485680f323c50!2sBBGP%20JAWA%20BARAT!5e0!3m2!1sid!2sid!4v1723602012276!5m2!1sid!2sid"
+            allowfullscreen=""
+            width="100%"
+            height="380"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        
+        <div class="col-lg-6">
+          <p style="color:#1e1e1e; text-align: justify; margin-top: 0.5rem;"> Kami selalu siap membantu dan menjawab setiap 
+            pertanyaan atau masalah yang Anda hadapi. Kami berkomitmen untuk memberikan dukungan terbaik, memastikan bahwa setiap kebutuhan Anda terpenuhi dengan solusi yang cepat dan efisien.</p>
+          <h5 style="color:#1e1e1e;">Jam Operasional</h5>
+          <p>Senin - Kamis = 07:30 s.d 16:00 WIB<br>
+             Jum’at = 07:30 s.d 16:30 WIB
+          </p>
+
+          <h5 style="color:#1e1e1e;">Informasi Kontak</h5>
+          <p>
+            <i data-feather="printer" style="width: 20px; height: 20px; color:#1e1e1e; margin-right: 6px;"></i> (022) 4207922<br>
+            <i data-feather="phone" style="width: 20px; height: 20px; color:#1e1e1e; margin-right: 6px;"></i> (022) 4231191<br>
+            <i data-feather="mail" style="width: 20px; height: 20px; color:#1e1e1e; margin-right: 6px;"></i> bbgpjabar@kemdikbud.go.id<br>
+          </p>
+        </div>
+  </section>
+
+    <!-- footer -->
+      <footer class="footer mt-auto py-4">
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col-md-6 d-flex flex-column align-items-start">
+              <img src="../Assets/logo-putih.png" alt="Logo" style="height: 70px;">
+              <p>&copy; 2024 BBGP Jawa Barat</p>
+              <p>Balai Besar Guru Penggerak Provinsi Jawa Barat<br />Jl. Diponegoro No.12 Bandung<br>(022) 423 1191<br>bbgpjabar@kemdikbud.go.id</p>
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-end">
+              <h4>Ikuti Kami</h4>
+              <ul class="social list-unstyled d-flex">
+                <li><a href="https://www.facebook.com/BBGPJabar.kemdikbudristek" title="Facebook" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://twitter.com/bbgp_jabar" title="Twitter" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://instagram.com/bbgpjabar.kemdikbudristek/" title="Instagram" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/c/BBGPJabardhP4TKTKdanPLB" title="Youtube" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-youtube.png" alt="Youtube"></a></li>
+                <li><a href="https://www.tiktok.com/@p4tktkplb.kemdikbud" title="Tiktok" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-tiktok.png" alt="Tiktok"></a></li>
+                <li><a href="https://open.spotify.com/show/6DCe3lNzVEgG7VrXo71Acq?si=kK8eK1VOQUOoFf7vr2bo0A&dl_branch=1" title="Spotify" target="_blank"><img src="https://bbgpjabar.kemdikbud.go.id/wp-content/themes/bbgpjabar2/images/icon-spotify.png" alt="Spotify"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer> 
+      <script>
+        feather.replace();
+      </script>      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
